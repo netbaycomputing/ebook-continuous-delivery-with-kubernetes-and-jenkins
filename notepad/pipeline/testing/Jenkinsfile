@@ -36,6 +36,8 @@ podTemplate(label: 'testing',
       stage('Build and push a new Docker image with the tag based on the Git branch') {
         container('docker') {
           sh """
+            echo ${DOCKERHUB_USERNAME}
+            echo ${DOCKERHUB_PASSWORD}
             docker login -u ${DOCKERHUB_USERNAME} -p ${DOCKERHUB_PASSWORD}
             docker build -t ${DOCKERHUB_USERNAME}/${image_name}:${GIT_BRANCH} .
             docker push ${DOCKERHUB_USERNAME}/${image_name}:${GIT_BRANCH}
