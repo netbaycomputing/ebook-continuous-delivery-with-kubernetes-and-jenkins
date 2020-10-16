@@ -62,7 +62,7 @@ podTemplate(label: 'testing',
           kubectl apply -f notepad/k8s/testing/notepad-testing-deployment.yaml
           sleep 20
           kubectl apply -f notepad/k8s/testing/notepad-testing-service.yaml --validate=false
-          sleep 20
+          sleep 60
 
           kubectl rollout status deployment notepad-deployment-testing
 
