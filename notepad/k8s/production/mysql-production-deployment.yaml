@@ -7,6 +7,10 @@ metadata:
     env: production
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+      env: production
   template:
     metadata:
       labels:

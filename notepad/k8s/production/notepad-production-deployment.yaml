@@ -8,6 +8,11 @@ metadata:
     track: stable
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: notepad
+      env: production
+      track: stable
   template:
     metadata:
       labels:

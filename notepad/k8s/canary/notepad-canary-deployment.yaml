@@ -7,6 +7,10 @@ metadata:
     track: canary
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: notepad
+      env: canary
   template:
     metadata:
       labels:
