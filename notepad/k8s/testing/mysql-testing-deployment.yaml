@@ -18,13 +18,13 @@ spec:
         env: testing
     spec:
       containers:
-      - name: mysql-testing
-        image: mysql:5.7
-        ports:
-        - name: mysql-port
-          containerPort: 3306
-        env:
-          - name: MYSQL_DATABASE
-            value: notepad
-          - name: MYSQL_ROOT_PASSWORD
-            value: root
+        - name: mysql-testing
+          image: mysql:5.7
+          ports:
+            - name: mysql-port
+              containerPort: 3306
+          env:
+            - name: MYSQL_DATABASE
+              value: notepad
+            - name: MYSQL_ROOT_PASSWORD
+              value: root
