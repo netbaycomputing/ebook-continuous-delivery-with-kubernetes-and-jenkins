@@ -18,16 +18,16 @@ spec:
         env: production
     spec:
       containers:
-      - name: mysql-production
-        image: mysql:5.7
-        ports:
-        - name: mysql-port
-          containerPort: 3306
-        env:
-          - name: MYSQL_DATABASE
-            value: notepad
-          - name: MYSQL_ROOT_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: mysql-production-root-password-secret
-                key: PASSWORD
+        - name: mysql-production
+          image: mysql:5.7
+          ports:
+            - name: mysql-port
+              containerPort: 3306
+          env:
+            - name: MYSQL_DATABASE
+              value: notepad
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-production-root-password-secret
+                  key: PASSWORD

@@ -18,16 +18,16 @@ spec:
         env: staging
     spec:
       containers:
-      - name: mysql-staging
-        image: mysql:5.7
-        ports:
-        - name: mysql-port
-          containerPort: 3306
-        env:
-          - name: MYSQL_DATABASE
-            value: notepad
-          - name: MYSQL_ROOT_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: mysql-staging-root-password-secret
-                key: PASSWORD
+        - name: mysql-staging
+          image: mysql:5.7
+          ports:
+            - name: mysql-port
+              containerPort: 3306
+          env:
+            - name: MYSQL_DATABASE
+              value: notepad
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-staging-root-password-secret
+                  key: PASSWORD
