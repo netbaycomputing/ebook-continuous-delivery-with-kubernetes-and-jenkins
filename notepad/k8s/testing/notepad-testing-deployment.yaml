@@ -10,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: notepad
-      env: testing
   template:
     metadata:
       labels:
