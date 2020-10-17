@@ -57,7 +57,7 @@ podTemplate(label: 'testing',
 
           kubectl apply -f notepad/k8s/testing/mysql-testing-deployment.yaml
           kubectl apply -f notepad/k8s/testing/mysql-testing-service.yaml --validate=false
-          sleep 20
+          sleep 30
           kubectl apply -f notepad/k8s/testing/notepad-testing-deployment.yaml
           kubectl apply -f notepad/k8s/testing/notepad-testing-service.yaml --validate=false
 
